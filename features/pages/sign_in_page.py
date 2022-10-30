@@ -1,6 +1,5 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-from time import sleep
 from features.pages.base_page import BasePage
 
 
@@ -21,7 +20,7 @@ class SignInPage(BasePage):
     def enter_data_in_pwd_field(self, password):
         self.driver.find_element(*SignInPage.PWD_FIELD_SELECTOR).send_keys(password)
 
-    def is_login_button_enable(self):
+    def is_login_button_enabled(self):
         return self.driver.find_element(*SignInPage.LOGIN_SELECTOR).is_enabled()
 
     def warning_message_text(self):
