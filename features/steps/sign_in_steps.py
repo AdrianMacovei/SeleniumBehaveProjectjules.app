@@ -14,7 +14,7 @@ def step_impl(context):
 
 @then(u'I am redirected to the sign-up page')
 def step_impl(context):
-    assert context.sign_up_page.verify_url
+    context.sign_up_page.verify_url
 
 
 @when(u'I enter "{email}" in email field')
